@@ -19,7 +19,7 @@ This project implements a simple proof-of-work blockchain in Go. It allows users
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/pri-3x/Go-POW
    cd go-pow
    ```
 
@@ -42,4 +42,10 @@ go run .
 
 The server will start on the specified port (default is 8080).
 
-### API Endpoints
+### Add a new block
+
+To add a new block to the blockchain, send a POST request to the `/` endpoint with the desired data in JSON format:
+```bash
+curl -X POST http://localhost:8080 -H "Content-Type: application/json" -d '{"data": 75}'
+```
+
